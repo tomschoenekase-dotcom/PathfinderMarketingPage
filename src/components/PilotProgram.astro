@@ -1,0 +1,65 @@
+---
+const details = [
+  {
+    label: 'No cost to your venue',
+    description: 'No license fee, no setup charge, no contract. The pilot program is entirely free.',
+  },
+  {
+    label: 'We handle setup and training',
+    description:
+      'You provide your content — maps, guides, FAQs, event schedules. PathFinder does the technical work.',
+  },
+  {
+    label: 'Your visitors get a working assistant',
+    description:
+      'From day one, visitors can scan and ask questions about your specific venue and get accurate answers.',
+  },
+  {
+    label: 'A genuine partnership',
+    description:
+      "We're looking for real feedback from real venues. You get a valuable tool; we get an honest case study.",
+  },
+];
+---
+
+<section id="pilot" class="py-24 bg-navy">
+  <div class="max-w-5xl mx-auto px-5">
+    <div class="text-center mb-14">
+      <span class="inline-block bg-accent/20 text-accent text-xs font-semibold uppercase tracking-widest px-3 py-1 rounded-full mb-4">
+        Free Local Pilot Program
+      </span>
+      <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-5">
+        Try PathFinder at your venue — at no cost
+      </h2>
+      <p class="text-white/60 text-lg max-w-2xl mx-auto leading-relaxed">
+        We're partnering with a small number of local venues to deploy PathFinder for free. No cost, no contract, no technical requirements on your end. Just a willingness to try something new and share what you learn.
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 gap-5 mb-12">
+      {details.map((d) => (
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-6 flex gap-4">
+          <div class="w-6 h-6 rounded-full bg-accent/20 border border-accent/40 flex items-center justify-center shrink-0 mt-0.5">
+            <svg class="w-3.5 h-3.5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+            </svg>
+          </div>
+          <div>
+            <div class="text-white font-semibold text-sm mb-1">{d.label}</div>
+            <div class="text-white/50 text-sm leading-relaxed">{d.description}</div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="text-center">
+      <a
+        href="#contact"
+        class="inline-block bg-accent hover:bg-accent/90 text-white font-semibold px-10 py-4 rounded-xl transition-all shadow-lg shadow-accent/30 text-lg"
+      >
+        Contact About a Free Pilot
+      </a>
+      <p class="text-white/40 text-sm mt-4">No commitment required. We'll respond within two business days.</p>
+    </div>
+  </div>
+</section>

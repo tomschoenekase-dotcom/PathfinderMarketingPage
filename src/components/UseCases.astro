@@ -1,0 +1,89 @@
+---
+const cases = [
+  {
+    icon: '🌲',
+    title: 'Natural Parks & Trail Systems',
+    description:
+      '"Which trail is right for our family?" "What wildlife might we see today?" PathFinder helps visitors plan before they take their first step on a path.',
+  },
+  {
+    icon: '🏛️',
+    title: 'Museums & Science Centers',
+    description:
+      '"What should we see first?" "Can you explain this exhibit?" Turn overwhelmed first-time visitors into engaged guests who know where to go.',
+  },
+  {
+    icon: '🏚️',
+    title: 'Historic Homes & Heritage Sites',
+    description:
+      '"Who lived here?" "What happened in this room?" Bring history to life without requiring additional docent hours.',
+  },
+  {
+    icon: '🦋',
+    title: 'Nature Centers & Wildlife Sanctuaries',
+    description:
+      '"Is this bird endangered?" "What programs run here?" Answer the questions your educators answer dozens of times each day.',
+  },
+  {
+    icon: '🤝',
+    title: 'Community Service Organizations',
+    description:
+      '"Do I qualify for this program?" "What documents do I need?" Reduce confusion and help people find the right resources faster.',
+  },
+  {
+    icon: '🐠',
+    title: 'Zoos & Aquariums',
+    description:
+      '"When is feeding time?" "What do these animals eat?" Keep visitors engaged and informed throughout their entire visit.',
+  },
+  {
+    icon: '🌸',
+    title: 'Botanical Gardens',
+    description:
+      '"What is this plant?" "Is it in bloom right now?" Let curiosity guide the visit with instant, accurate plant and garden information.',
+  },
+];
+---
+
+<section id="use-cases" class="py-24 bg-surface">
+  <div class="max-w-6xl mx-auto px-5">
+    <div class="text-center mb-16">
+      <span class="inline-block bg-brand/10 text-brand text-xs font-semibold uppercase tracking-widest px-3 py-1 rounded-full mb-4">
+        Use Cases
+      </span>
+      <h2 class="text-3xl md:text-4xl font-extrabold text-navy mb-4">
+        Built for the places people love to visit
+      </h2>
+      <p class="text-navy/60 text-lg max-w-xl mx-auto">
+        PathFinder works for any venue where visitors have questions, need navigation help, or want to get more out of their experience.
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      {cases.map((c) => (
+        <div class="bg-white rounded-2xl border border-steel p-6 hover:border-brand/40 hover:shadow-md transition-all">
+          <div class="text-3xl mb-4">{c.icon}</div>
+          <h3 class="text-base font-bold text-navy mb-2">{c.title}</h3>
+          <p class="text-navy/60 text-sm leading-relaxed">{c.description}</p>
+        </div>
+      ))}
+
+      <!-- CTA card -->
+      <div class="bg-brand rounded-2xl p-6 flex flex-col justify-between">
+        <div>
+          <div class="text-3xl mb-4">✉️</div>
+          <h3 class="text-base font-bold text-white mb-2">Don't see your venue type?</h3>
+          <p class="text-white/70 text-sm leading-relaxed">
+            If your visitors have questions, PathFinder can help. Get in touch and tell us about your venue.
+          </p>
+        </div>
+        <a
+          href="#contact"
+          class="mt-6 bg-white text-brand font-semibold text-sm px-5 py-3 rounded-xl text-center hover:bg-surface transition-colors"
+        >
+          Get in Touch
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

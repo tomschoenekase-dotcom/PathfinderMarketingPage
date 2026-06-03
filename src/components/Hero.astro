@@ -1,0 +1,140 @@
+---
+---
+
+<section class="min-h-screen bg-navy flex items-center pt-16">
+  <div class="max-w-6xl mx-auto px-5 py-20 w-full">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+
+      <!-- Text column -->
+      <div>
+        <span class="inline-block bg-accent/20 text-accent text-xs font-semibold uppercase tracking-widest px-3 py-1 rounded-full mb-6">
+          AI-Powered Visitor Guidance
+        </span>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
+          Give Every Visitor a Personal Guide
+        </h1>
+        <p class="text-lg text-white/70 leading-relaxed mb-8 max-w-lg">
+          PathFinder is a visitor assistant trained on your specific venue. Place a QR code at the entrance — visitors scan, ask anything, and get accurate answers. No app download. No staff required.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a
+            href="#contact"
+            class="bg-accent hover:bg-accent/90 text-white font-semibold px-7 py-4 rounded-xl text-center transition-all shadow-lg shadow-accent/30"
+          >
+            Contact About a Free Pilot
+          </a>
+          <a
+            href="#how-it-works"
+            class="border border-white/30 hover:border-white/60 text-white font-medium px-7 py-4 rounded-xl text-center transition-colors"
+          >
+            See How It Works ↓
+          </a>
+        </div>
+      </div>
+
+      <!-- Phone mockup column -->
+      <div class="flex justify-center md:justify-end">
+        <div class="relative">
+          <!-- Phone frame -->
+          <div
+            class="w-64 h-[520px] rounded-[2.5rem] border-4 border-steel/40 bg-[#0a1e36] shadow-2xl overflow-hidden flex flex-col"
+          >
+            <!-- Status bar + notch -->
+            <div class="h-10 bg-[#0a1e36] flex items-center justify-center shrink-0">
+              <div class="w-24 h-5 bg-black rounded-full"></div>
+            </div>
+
+            <!-- Screen content -->
+            <div class="flex-1 bg-surface flex flex-col overflow-hidden">
+              <!-- App header -->
+              <div class="bg-brand px-4 py-3 flex items-center gap-3">
+                <div class="w-7 h-7 rounded-full bg-accent/30 flex items-center justify-center shrink-0">
+                  <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="text-white text-xs font-semibold leading-none">PathFinder</div>
+                  <div class="text-white/60 text-[10px] mt-0.5">Forest Park Visitor Guide</div>
+                </div>
+              </div>
+
+              <!-- Chat messages -->
+              <div class="flex-1 px-3 py-4 flex flex-col gap-3 overflow-hidden">
+                <!-- Bot greeting -->
+                <div class="flex gap-2 items-end">
+                  <div class="w-6 h-6 rounded-full bg-brand shrink-0 flex items-center justify-center">
+                    <span class="text-white text-[9px] font-bold">PF</span>
+                  </div>
+                  <div class="bg-white border border-steel rounded-2xl rounded-bl-sm px-3 py-2 text-[11px] text-navy leading-relaxed max-w-[80%]">
+                    Welcome to Forest Park! What would you like to explore today?
+                  </div>
+                </div>
+
+                <!-- User message -->
+                <div class="flex justify-end">
+                  <div class="bg-accent text-white rounded-2xl rounded-br-sm px-3 py-2 text-[11px] leading-relaxed max-w-[75%]">
+                    Where should we start with two young kids?
+                  </div>
+                </div>
+
+                <!-- Bot response -->
+                <div class="flex gap-2 items-end">
+                  <div class="w-6 h-6 rounded-full bg-brand shrink-0 flex items-center justify-center">
+                    <span class="text-white text-[9px] font-bold">PF</span>
+                  </div>
+                  <div class="bg-white border border-steel rounded-2xl rounded-bl-sm px-3 py-2 text-[11px] text-navy leading-relaxed max-w-[80%]">
+                    The Children's Pavilion is a great starting point — it's near the main entrance and has interactive displays for ages 2–10. From there, the paddleboat dock is just a 5-minute walk.
+                  </div>
+                </div>
+
+                <!-- User follow-up -->
+                <div class="flex justify-end">
+                  <div class="bg-accent text-white rounded-2xl rounded-br-sm px-3 py-2 text-[11px] leading-relaxed max-w-[75%]">
+                    Is it accessible with a stroller?
+                  </div>
+                </div>
+
+                <!-- Typing indicator -->
+                <div class="flex gap-2 items-end">
+                  <div class="w-6 h-6 rounded-full bg-brand shrink-0 flex items-center justify-center">
+                    <span class="text-white text-[9px] font-bold">PF</span>
+                  </div>
+                  <div class="bg-white border border-steel rounded-2xl rounded-bl-sm px-3 py-2">
+                    <div class="flex gap-1 items-center h-4">
+                      <div class="w-1.5 h-1.5 rounded-full bg-navy/40 animate-bounce [animation-delay:0ms]"></div>
+                      <div class="w-1.5 h-1.5 rounded-full bg-navy/40 animate-bounce [animation-delay:150ms]"></div>
+                      <div class="w-1.5 h-1.5 rounded-full bg-navy/40 animate-bounce [animation-delay:300ms]"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Input area -->
+              <div class="border-t border-steel bg-white px-3 py-2.5 flex items-center gap-2 shrink-0">
+                <div class="flex-1 bg-surface rounded-full px-3 py-1.5 text-[10px] text-navy/40">
+                  Ask anything about this venue...
+                </div>
+                <div class="w-7 h-7 rounded-full bg-accent flex items-center justify-center shrink-0">
+                  <svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 12h14M12 5l7 7-7 7"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <!-- Home indicator -->
+            <div class="h-8 bg-[#0a1e36] flex items-center justify-center shrink-0">
+              <div class="w-24 h-1 bg-steel/30 rounded-full"></div>
+            </div>
+          </div>
+
+          <!-- Decorative glow -->
+          <div class="absolute inset-0 -z-10 blur-3xl opacity-20 bg-accent rounded-full scale-75"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

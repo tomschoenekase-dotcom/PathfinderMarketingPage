@@ -1,0 +1,66 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'PathFinder — AI-Powered Visitor Guidance for Museums, Parks & Cultural Venues',
+  description = 'PathFinder gives every visitor a personal guide. Trained on your specific venue, activated by a simple QR code. No app download required.',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <!-- Nav -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm border-b border-steel">
+      <div class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
+        <a href="#" class="text-xl font-extrabold text-brand tracking-tight">PathFinder</a>
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-navy/70">
+          <a href="#how-it-works" class="hover:text-brand transition-colors">How It Works</a>
+          <a href="#use-cases" class="hover:text-brand transition-colors">Use Cases</a>
+          <a href="#pilot" class="hover:text-brand transition-colors">Free Pilot</a>
+        </nav>
+        <a
+          href="#contact"
+          class="bg-accent hover:bg-brand text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors"
+        >
+          Free Pilot →
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-navy text-white/60 py-10">
+      <div class="max-w-6xl mx-auto px-5 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
+        <span class="font-extrabold text-white text-base">PathFinder</span>
+        <p>AI-powered visitor guidance for museums, parks, and cultural venues.</p>
+        <a href="mailto:tomschoenekase@gmail.com" class="text-accent hover:text-white transition-colors">
+          tomschoenekase@gmail.com
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>

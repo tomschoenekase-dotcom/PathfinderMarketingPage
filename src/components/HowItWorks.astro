@@ -1,0 +1,53 @@
+---
+const steps = [
+  {
+    number: '01',
+    title: 'Share your venue content',
+    description:
+      'Upload your maps, exhibit guides, FAQs, event schedules, and anything else you share with visitors. PathFinder builds an AI assistant trained specifically on your place.',
+  },
+  {
+    number: '02',
+    title: 'Place QR codes at your venue',
+    description:
+      'Print them at entrances, on exhibit labels, in brochures, or anywhere visitors naturally stop. No hardware to buy, no app to configure — just a code and a phone.',
+  },
+  {
+    number: '03',
+    title: 'Visitors scan and ask anything',
+    description:
+      "Any question, any language, any smartphone. Visitors get accurate answers specific to your venue — in seconds, without needing to find a staff member.",
+  },
+];
+---
+
+<section id="how-it-works" class="py-24 bg-white">
+  <div class="max-w-6xl mx-auto px-5">
+    <div class="text-center mb-16">
+      <span class="inline-block bg-brand/10 text-brand text-xs font-semibold uppercase tracking-widest px-3 py-1 rounded-full mb-4">
+        How It Works
+      </span>
+      <h2 class="text-3xl md:text-4xl font-extrabold text-navy mb-4">
+        Simple for venues. Powerful for visitors.
+      </h2>
+      <p class="text-navy/60 text-lg max-w-xl mx-auto">
+        PathFinder is designed for people who run venues, not people who run software.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8 relative">
+      <!-- Connector line (desktop) -->
+      <div class="hidden md:block absolute top-14 left-[calc(16.67%+1rem)] right-[calc(16.67%+1rem)] h-0.5 bg-steel z-0"></div>
+
+      {steps.map((step) => (
+        <div class="relative z-10 flex flex-col items-center text-center">
+          <div class="w-28 h-28 rounded-full bg-surface border-2 border-steel flex items-center justify-center mb-6">
+            <span class="text-3xl font-extrabold text-brand">{step.number}</span>
+          </div>
+          <h3 class="text-lg font-bold text-navy mb-3">{step.title}</h3>
+          <p class="text-navy/60 text-sm leading-relaxed">{step.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

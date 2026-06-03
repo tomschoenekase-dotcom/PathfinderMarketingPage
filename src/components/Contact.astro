@@ -1,0 +1,128 @@
+---
+---
+
+<section id="contact" class="py-24 bg-white">
+  <div class="max-w-5xl mx-auto px-5">
+    <div class="grid md:grid-cols-2 gap-16 items-start">
+
+      <!-- Left: copy -->
+      <div>
+        <span class="inline-block bg-brand/10 text-brand text-xs font-semibold uppercase tracking-widest px-3 py-1 rounded-full mb-6">
+          Get in Touch
+        </span>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-navy mb-5">
+          Interested in a free pilot for your venue?
+        </h2>
+        <p class="text-navy/60 leading-relaxed mb-8">
+          Tell us a bit about your venue and what you're hoping to accomplish. We'll be back in touch within two business days to talk through what a pilot would look like for you.
+        </p>
+        <div class="space-y-5 text-sm">
+          <div class="flex gap-3 items-start">
+            <div class="w-8 h-8 rounded-lg bg-brand/10 text-brand flex items-center justify-center shrink-0">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              </svg>
+            </div>
+            <div>
+              <div class="font-semibold text-navy mb-0.5">Email</div>
+              <a href="mailto:tomschoenekase@gmail.com" class="text-accent hover:text-brand transition-colors">
+                tomschoenekase@gmail.com
+              </a>
+            </div>
+          </div>
+          <div class="flex gap-3 items-start">
+            <div class="w-8 h-8 rounded-lg bg-brand/10 text-brand flex items-center justify-center shrink-0">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <div>
+              <div class="font-semibold text-navy mb-0.5">No commitment required</div>
+              <div class="text-navy/55">We're happy to just answer questions about what PathFinder can do for your venue.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: form -->
+      <div class="bg-surface rounded-2xl border border-steel p-8">
+        <form id="contact-form" class="space-y-5">
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div>
+              <label for="name" class="block text-xs font-semibold text-navy/70 uppercase tracking-wide mb-2">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                placeholder="Your name"
+                class="w-full bg-white border border-steel rounded-xl px-4 py-3 text-sm text-navy placeholder-navy/30 focus:outline-none focus:border-accent transition-colors"
+              />
+            </div>
+            <div>
+              <label for="org" class="block text-xs font-semibold text-navy/70 uppercase tracking-wide mb-2">Organization</label>
+              <input
+                type="text"
+                id="org"
+                name="org"
+                required
+                placeholder="Venue or organization"
+                class="w-full bg-white border border-steel rounded-xl px-4 py-3 text-sm text-navy placeholder-navy/30 focus:outline-none focus:border-accent transition-colors"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label for="role" class="block text-xs font-semibold text-navy/70 uppercase tracking-wide mb-2">Your Role / Title</label>
+            <input
+              type="text"
+              id="role"
+              name="role"
+              placeholder="e.g. Museum Director, Park Ranger"
+              class="w-full bg-white border border-steel rounded-xl px-4 py-3 text-sm text-navy placeholder-navy/30 focus:outline-none focus:border-accent transition-colors"
+            />
+          </div>
+
+          <div>
+            <label for="message" class="block text-xs font-semibold text-navy/70 uppercase tracking-wide mb-2">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              required
+              placeholder="Tell us about your venue and what you're hoping to accomplish."
+              class="w-full bg-white border border-steel rounded-xl px-4 py-3 text-sm text-navy placeholder-navy/30 focus:outline-none focus:border-accent transition-colors resize-none"
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="w-full bg-accent hover:bg-brand text-white font-semibold py-4 rounded-xl transition-colors text-base"
+          >
+            Send Message
+          </button>
+          <p class="text-xs text-navy/40 text-center">
+            This will open your email client with your message pre-filled.
+          </p>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+  const form = document.getElementById('contact-form') as HTMLFormElement;
+  form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = (document.getElementById('name') as HTMLInputElement).value;
+    const org = (document.getElementById('org') as HTMLInputElement).value;
+    const role = (document.getElementById('role') as HTMLInputElement).value;
+    const message = (document.getElementById('message') as HTMLTextAreaElement).value;
+
+    const body = `Name: ${name}\nOrganization: ${org}\nRole: ${role}\n\nMessage:\n${message}`;
+    const subject = `PathFinder Pilot Inquiry — ${org}`;
+    const mailto = `mailto:tomschoenekase@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailto;
+  });
+</script>
